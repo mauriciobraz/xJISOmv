@@ -1,4 +1,23 @@
-[[ d1_databases ]]
+pages_build_output_dir = ".svelte-kit/cloudflare"
+compatibility_flags = ["nodejs_compat_v2"]
+compatibility_date = "2024-09-09"
+name = "bet-bit"
+
+[[services]]
+binding = "ARGON2"
+service = "argon2"
+
+[[d1_databases]]
 binding = "D1"
 database_id = "3142be788224"
 database_name = "development"
+
+[[env.production.services]]
+binding = "ARGON2"
+service = "argon2"
+environment = "production"
+
+[[env.production.d1_databases]]
+binding = "D1"
+database_id = "***"
+database_name = "default-d1"

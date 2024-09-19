@@ -1,10 +1,40 @@
-generator client {
-  provider = "prisma-client-js"
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+model Session {
+  id String @id @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  active_expires BigInt
+  idle_expires   BigInt
+  user_id        String
+
+  user User @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
+}
+
+model Key {
+  id String @id @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  hashed_password String?
+  user_id         String
+
+  user User @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
 }
 
 model User {
@@ -13,7 +43,16 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  Wallets Wallet[]
+  key           Key[]
+  wallets       Wallet[]
+  auth_sessions Session[]
+
+  username      String @unique
+  password_hash String
+
+  // NOT IMPLEMENTED YET
+  two_factor_secret String?
+  two_factor_method String?
 }
 
 model Wallet {
@@ -25,10 +64,10 @@ model Wallet {
   userId   String
   tickerId String
 
-  User   User   @relation(fields: [userId], references: [id])
-  Ticker Ticker @relation(fields: [tickerId], references: [id])
+  user   User   @relation(fields: [userId], references: [id])
+  ticker Ticker @relation(fields: [tickerId], references: [id])
 
-  Transactions Transaction[]
+  transactions Transaction[]
 
   @@unique([userId, tickerId])
 }
@@ -51,7 +90,7 @@ model Ticker {
   /// @example TRC20_USDT
   slug String @unique
 
-  Wallets Wallet[]
+  wallets Wallet[]
 
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
@@ -86,20 +125,6 @@ model Transaction {
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
 
-  Status TransactionStatus @default(Pending)
-  Wallet Wallet            @relation(fields: [walletId], references: [id])
-}
-
-enum TransactionStatus {
-  /// The transaction failed to process.
-  Failed
-
-  /// The transaction is pending user payment.
-  Pending
-
-  /// The transaction is currently being processed.
-  Confirming
-
-  /// The transaction has been completed successfully.
-  Successful
+  status String
+  wallet Wallet @relation(fields: [walletId], references: [id])
 }

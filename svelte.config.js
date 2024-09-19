@@ -8,7 +8,7 @@ const SVELTE_CONFIG = {
 		adapter: cloudflareAdapter({
 			routes: {
 				include: ['/*'],
-				exclude: ['<all>'],
+				exclude: ['/build/*', '/dist/*', '/static/*'],
 			},
 		}),
 	},
