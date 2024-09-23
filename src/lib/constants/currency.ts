@@ -143,3 +143,32 @@ export enum Ticker {
 	LTC = 'ltc',
 	TRX = 'trx',
 }
+
+export const SupportedTickers = [
+	Ticker.ERC20_ARB,
+	Ticker.ERC20_BNB,
+	Ticker.ERC20_DAI,
+	Ticker.ERC20_MKR,
+
+	Ticker.ERC20_EURC,
+	Ticker.ERC20_EURT,
+	Ticker.ERC20_LINK,
+	Ticker.ERC20_NEXO,
+	Ticker.ERC20_PEPE,
+	Ticker.ERC20_SHIB,
+	Ticker.ERC20_TUSD,
+	Ticker.ERC20_USDC,
+	Ticker.ERC20_USDP,
+	Ticker.ERC20_USDT,
+
+	Ticker.ERC20_VERSE,
+	Ticker.ERC20_1INCH,
+
+	Ticker.TRC20_USDT,
+	Ticker.TRC20_USDC,
+	Ticker.BEP20_XRP,
+
+	Ticker.DOGE,
+	Ticker.TRX,
+	Ticker.BTC,
+];
