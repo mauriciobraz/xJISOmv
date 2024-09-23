@@ -1,11 +1,10 @@
+import { AES_192_CBC_PASS, AES_192_CBC_SALT } from '$lib/server/env';
 import {
 	scryptSync,
 	randomBytes,
 	createCipheriv,
 	createDecipheriv,
 } from 'node:crypto';
-
-import { AES_192_CBC_PASS, AES_192_CBC_SALT } from '$env/static/private';
 
 export type Serializable =
 	| { [key: string]: Serializable }
