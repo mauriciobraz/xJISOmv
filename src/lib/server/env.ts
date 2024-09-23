@@ -6,10 +6,11 @@ import { dedent } from '$lib/helpers/dedent';
 import { Address, encodeAddress, TickerKey } from '$lib/models/addr';
 
 export const {
+	AUTH_SECRET,
 	ADDRESSES_TARGET,
 	AES_192_CBC_PASS,
 	AES_192_CBC_SALT,
-	AUTH_SECRET,
+	CRYPT_API_PUBLIC_KEY,
 } = parseEnv(env, {
 	AUTH_SECRET: {
 		schema: z.string(),
@@ -41,4 +42,15 @@ export const {
                           "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2": 0.5 }, ... }
     `,
 	},
+
+	CRYPT_API_PUBLIC_KEY: z.string().optional().default(dedent`
+    -----BEGIN PUBLIC KEY-----
+    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3FT0Ym8b3myVxhQW7ESuuu6lo
+    dGAsUJs4fq+Ey//jm27jQ7HHHDmP1YJO7XE7Jf/0DTEJgcw4EZhJFVwsk6d3+4fy
+    Bsn0tKeyGMiaE6cVkX0cy6Y85o8zgc/CwZKc0uw6d5siAo++xl2zl+RGMXCELQVE
+    ox7pp208zTvown577wIDAQAB
+    -----END PUBLIC KEY-----
+  `),
+
+	CRYPT_API_EMAIL: z.string().email().optional(),
 });
