@@ -17,5 +17,6 @@
 </script>
 
 <div class="prose space-y-5">
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html safeHTML}
 </div>

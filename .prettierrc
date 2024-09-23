@@ -8,13 +8,13 @@
 	"overrides": [
 		{
 			"files": "*.svelte",
-			"options": {
-				"parser": "svelte"
-			}
+			"options": { "parser": "svelte" }
 		}
 	],
 	"plugins": [
 		"prettier-plugin-svelte",
-		"prettier-plugin-tailwindcss"
+		"prettier-plugin-classnames",
+		"prettier-plugin-tailwindcss",
+		"prettier-plugin-merge"
 	]
 }

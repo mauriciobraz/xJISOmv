@@ -3,7 +3,6 @@ import { z } from 'zod';
 import { Fiat, Ticker } from '$lib/constants/currency';
 import { enumKeys, parseType } from '$lib/helpers/zod';
 
-export type AddressMap = z.infer<typeof AddressMap>;
 export type Address = z.infer<typeof Address>;
 
 export type FiatKey = z.infer<typeof FiatKey>;
@@ -25,8 +24,6 @@ export const Address = parseType(
 		}),
 	]),
 );
-
-export const AddressMap = Address;
 
 /**
  * Encodes an address object to a string

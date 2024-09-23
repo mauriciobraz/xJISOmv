@@ -1,5 +1,13 @@
-<p class="text-center text-lg opacity-75">
-	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, error ad
-	deleniti aliquam quos magni quasi saepe molestias unde. Temporibus atque
-	veniam culpa totam unde repellat magnam reiciendis necessitatibus sequi,
-</p>
+<script>
+	import ModalSheet from '$lib/components/ModalSheet.svelte';
+</script>
+
+<div class="h-screen w-screen bg-gray-900">
+	<ModalSheet id="sheets" label="Open Bottom Sheet">
+		<p class="text-base text-gray-100">
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda ad est
+			officia doloremque ipsa, dolorem laboriosam dicta repellendus odio tempore
+			quis, eligendi maxime hic enim, numquam non nesciunt aliquam illo.
+		</p>
+	</ModalSheet>
+</div>
