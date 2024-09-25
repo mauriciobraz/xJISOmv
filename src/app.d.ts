@@ -2,7 +2,11 @@ declare global {
 	namespace App {
 		// interface PageState {}
 		// interface PageData {}
-		// interface Error {}
+
+		interface Error {
+			message?: string;
+			context?: object;
+		}
 
 		interface Platform {
 			env: {

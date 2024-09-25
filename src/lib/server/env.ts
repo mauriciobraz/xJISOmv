@@ -3,7 +3,7 @@ import { parseEnv, z } from 'znv';
 
 import { env } from '$env/dynamic/private';
 import { dedent } from '$lib/helpers/dedent';
-import { Address, encodeAddress, TickerKey } from '$lib/models/addr';
+import { Address, encodeAddress, TickerKey } from '$lib/models/address';
 
 export const {
 	AUTH_SECRET,

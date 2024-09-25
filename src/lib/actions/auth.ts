@@ -6,7 +6,7 @@ import { hash, verify } from '$lib/server/argon2';
 import { createLuciaClient } from '$lib/server/lucia';
 import { createPrismaClient } from '$lib/server/prisma';
 
-import { SignInSchema, SignUpSchema } from '$lib/models/auth';
+import { SignInSchema, SignUpSchema } from '$lib/models/actions';
 
 export const SignUp: Action = async ({ platform, request, cookies }) => {
 	const {

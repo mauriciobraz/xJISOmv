@@ -11,7 +11,7 @@ export const ConfirmedParams = z.object({
 	 * Transaction ID created on the deposit request,
 	 * used to identify the transaction on the server side.
 	 */
-	transactionId: z.number(),
+	transactionId: z.string(),
 });
 
 export const ConfirmedRequest = z.object({

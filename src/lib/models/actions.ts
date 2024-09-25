@@ -1,4 +1,10 @@
 import { z } from 'zod';
+import { Ticker } from '$lib/constants/currency';
+
+export const AddFundsSchema = z.object({
+	ticker: z.nativeEnum(Ticker),
+	amount: z.number().min(0),
+});
 
 export const SecurePass = z.string().superRefine((value, ctx) => {
 	if (value.length < 6) {
@@ -44,7 +50,7 @@ export const SecurePass = z.string().superRefine((value, ctx) => {
 	}
 });
 
-const Username = z
+export const Username = z
 	.string()
 	.min(3)
 	.max(32)
