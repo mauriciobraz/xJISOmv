@@ -48,6 +48,7 @@
     "@prisma/adapter-d1": "^5.19.1",
     "@prisma/client": "^5.19.1",
     "bits-ui": "^0.21.15",
+    "class-variance-authority": "^0.7.0",
     "insane": "^2.6.2",
     "marked": "^14.1.2",
     "normalize-url": "^8.0.1",

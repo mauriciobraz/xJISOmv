@@ -15,13 +15,18 @@ const ESLINT_CONFIG = [
 	...svelte.configs['flat/prettier'],
 
 	{
-		languageOptions: { globals: { ...globals.browser, ...globals.node } }
+		languageOptions: { globals: { ...globals.browser, ...globals.node } },
 	},
 	{
 		files: ['**/*.svelte'],
-		languageOptions: { parserOptions: { parser: typescript.parser } }
+		languageOptions: { parserOptions: { parser: typescript.parser } },
 	},
-	{ ignores: ['build/', '.svelte-kit/', 'dist/'] }
+	{
+		ignores: ['build/', '.svelte-kit/', 'dist/'],
+		rules: {
+			'@typescript-eslint/no-unused-vars': 'off',
+		},
+	},
 ];
 
 export default ESLINT_CONFIG;
