@@ -11,10 +11,5 @@
 			"options": { "parser": "svelte" }
 		}
 	],
-	"plugins": [
-		"prettier-plugin-svelte",
-		"prettier-plugin-classnames",
-		"prettier-plugin-tailwindcss",
-		"prettier-plugin-merge"
-	]
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"]
 }
