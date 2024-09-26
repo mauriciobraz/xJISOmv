@@ -45,6 +45,9 @@ const TAILWIND_CONFIG = {
 					950: '#001319',
 				},
 			},
+			fontFamily: {
+				rubik: ['Rubik Variable', 'sans-serif'],
+			},
 		},
 	},
 };

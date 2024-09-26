@@ -150,6 +150,7 @@ export type SupportedTicker = Partial<
 		{
 			logo: string;
 			name: string;
+			ticker: Ticker;
 			network: string;
 		}
 	>
@@ -157,112 +158,120 @@ export type SupportedTicker = Partial<
 
 export const SUPPORTED_TICKERS = {
 	// [Ticker.ERC20_ARB]: {
-	// 	logo: '/assets/tickers/ERC20_ARB.png',
+	// 	logo: '/assets/tickers/ERC20_ARB.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Arbitrum',
 	// },
 	// [Ticker.ERC20_BNB]: {
-	// 	logo: '/assets/tickers/ERC20_BNB.png',
+	// 	logo: '/assets/tickers/ERC20_BNB.svg',
 	// 	network: 'Binance Smart Chain',
 	// 	name: 'Binance Coin',
 	// },
 	// [Ticker.ERC20_DAI]: {
-	// 	logo: '/assets/tickers/ERC20_DAI.png',
+	// 	logo: '/assets/tickers/ERC20_DAI.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Dai',
 	// },
 	// [Ticker.ERC20_MKR]: {
-	// 	logo: '/assets/tickers/ERC20_MKR.png',
+	// 	logo: '/assets/tickers/ERC20_MKR.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Maker',
 	// },
 	// [Ticker.ERC20_EURC]: {
-	// 	logo: '/assets/tickers/ERC20_EURC.png',
+	// 	logo: '/assets/tickers/ERC20_EURC.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Euro Coin',
 	// },
 	// [Ticker.ERC20_EURT]: {
-	// 	logo: '/assets/tickers/ERC20_EURT.png',
+	// 	logo: '/assets/tickers/ERC20_EURT.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Tether EURT',
 	// },
 	// [Ticker.ERC20_LINK]: {
-	// 	logo: '/assets/tickers/ERC20_LINK.png',
+	// 	logo: '/assets/tickers/ERC20_LINK.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Chainlink',
 	// },
 	// [Ticker.ERC20_NEXO]: {
-	// 	logo: '/assets/tickers/ERC20_NEXO.png',
+	// 	logo: '/assets/tickers/ERC20_NEXO.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Nexo',
 	// },
 	// [Ticker.ERC20_PEPE]: {
-	// 	logo: '/assets/tickers/ERC20_PEPE.png',
+	// 	logo: '/assets/tickers/ERC20_PEPE.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Pepe',
 	// },
 	// [Ticker.ERC20_SHIB]: {
-	// 	logo: '/assets/tickers/ERC20_SHIB.png',
+	// 	logo: '/assets/tickers/ERC20_SHIB.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Shiba Inu',
 	// },
 	// [Ticker.ERC20_TUSD]: {
-	// 	logo: '/assets/tickers/ERC20_TUSD.png',
+	// 	logo: '/assets/tickers/ERC20_TUSD.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'TrueUSD',
 	// },
 	[Ticker.ERC20_USDC]: {
-		logo: '/assets/tickers/ERC20_USDC.png',
+		ticker: Ticker.ERC20_USDC,
+		logo: '/assets/tickers/USDC.svg',
 		network: 'Ethereum',
 		name: 'USD Coin',
 	},
 	// [Ticker.ERC20_USDP]: {
-	// 	logo: '/assets/tickers/ERC20_USDP.png',
+	// 	logo: '/assets/tickers/ERC20_USDP.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Pax Dollar',
 	// },
 	[Ticker.ERC20_USDT]: {
-		logo: '/assets/tickers/ERC20_USDT.png',
+		ticker: Ticker.ERC20_USDT,
+		logo: '/assets/tickers/USDT.svg',
 		network: 'Ethereum',
-		name: 'Tether',
+		name: 'USD Tether',
 	},
 	// [Ticker.ERC20_VERSE]: {
-	// 	logo: '/assets/tickers/ERC20_VERSE.png',
+	// 	logo: '/assets/tickers/ERC20_VERSE.svg',
 	// 	network: 'Ethereum',
 	// 	name: 'Verse',
 	// },
 	// [Ticker.ERC20_1INCH]: {
-	// 	logo: '/assets/tickers/ERC20_1INCH.png',
+	// 	logo: '/assets/tickers/ERC20_1INCH.svg',
 	// 	network: 'Ethereum',
 	// 	name: '1inch',
 	// },
 	[Ticker.TRC20_USDT]: {
-		logo: '/assets/tickers/TRC20_USDT.png',
+		ticker: Ticker.TRC20_USDT,
+		logo: '/assets/tickers/USDT.svg',
 		network: 'Tron',
-		name: 'Tether TRC20',
+		name: 'USD Tether',
 	},
 	[Ticker.TRC20_USDC]: {
-		logo: '/assets/tickers/TRC20_USDC.png',
+		ticker: Ticker.TRC20_USDC,
+		logo: '/assets/tickers/USDC.svg',
 		network: 'Tron',
-		name: 'USD Coin TRC20',
+		name: 'USD Coin',
 	},
 	[Ticker.BEP20_XRP]: {
-		logo: '/assets/tickers/BEP20_XRP.png',
+		ticker: Ticker.BEP20_XRP,
+		logo: '/assets/tickers/XRP.svg',
 		network: 'Binance Smart Chain',
 		name: 'XRP',
 	},
 	[Ticker.DOGE]: {
-		logo: '/assets/tickers/DOGE.png',
+		ticker: Ticker.DOGE,
+		logo: '/assets/tickers/DOGE.svg',
 		network: 'Dogecoin',
 		name: 'Dogecoin',
 	},
 	[Ticker.TRX]: {
-		logo: '/assets/tickers/TRX.png',
+		ticker: Ticker.TRX,
+		logo: '/assets/tickers/TRX.svg',
 		network: 'Tron',
 		name: 'Tron',
 	},
 	[Ticker.BTC]: {
-		logo: '/assets/tickers/BTC.png',
+		ticker: Ticker.BTC,
+		logo: '/assets/tickers/BTC.svg',
 		network: 'Bitcoin',
 		name: 'Bitcoin',
 	},

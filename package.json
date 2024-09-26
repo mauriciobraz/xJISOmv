@@ -28,6 +28,7 @@
     "fluid-tailwind": "^1.0.3",
     "globals": "^15.0.0",
     "lucia": "^3.2.0",
+    "lucide-svelte": "^0.446.0",
     "postcss": "^8.4.47",
     "prettier": "^3.1.1",
     "prettier-plugin-classnames": "^0.7.3",
@@ -44,6 +45,7 @@
     "wrangler": "^3.78.2"
   },
   "dependencies": {
+    "@fontsource-variable/rubik": "^5.1.0",
     "@lucia-auth/adapter-prisma": "^4.0.1",
     "@prisma/adapter-d1": "^5.19.1",
     "@prisma/client": "^5.19.1",

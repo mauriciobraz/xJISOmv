@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/rubik':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@lucia-auth/adapter-prisma':
         specifier: ^4.0.1
         version: 4.0.1(@prisma/client@5.19.1(prisma@5.19.1))(lucia@3.2.0)
@@ -102,6 +105,9 @@ importers:
       lucia:
         specifier: ^3.2.0
         version: 3.2.0
+      lucide-svelte:
+        specifier: ^0.446.0
+        version: 0.446.0(svelte@4.2.19)
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
@@ -531,6 +537,9 @@ packages:
 
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
+
+  '@fontsource-variable/rubik@5.1.0':
+    resolution: {integrity: sha512-gmh3xts3ARd0ktWW/VX+MVxhJr6TxHVeGLsQEaQXDVxvuNjn5WRucfKfXK3EVN2BcgRxUe1Fctv/v9zgEd0DUg==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -1670,6 +1679,11 @@ packages:
   lucia@3.2.0:
     resolution: {integrity: sha512-eXMxXwk6hqtjRTj4W/x3EnTUtAztLPm0p2N2TEBMDEbakDLXiYnDQ9z/qahjPdPdhPguQc+vwO0/88zIWxlpuw==}
 
+  lucide-svelte@0.446.0:
+    resolution: {integrity: sha512-ofx/Ykes1q1/sb0t4weezIt0SrMZd4x5Ox1APeR/ZgAHB7taXHqEExS9aGVImFqS35CfnjNGUqMr16/GwTd2lQ==}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5.0.0-next.42
+
   magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
 
@@ -2752,6 +2766,8 @@ snapshots:
       '@floating-ui/utils': 0.2.8
 
   '@floating-ui/utils@0.2.8': {}
+
+  '@fontsource-variable/rubik@5.1.0': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
@@ -3883,6 +3899,10 @@ snapshots:
   lucia@3.2.0:
     dependencies:
       oslo: 1.2.0
+
+  lucide-svelte@0.446.0(svelte@4.2.19):
+    dependencies:
+      svelte: 4.2.19
 
   magic-string@0.25.9:
     dependencies:
