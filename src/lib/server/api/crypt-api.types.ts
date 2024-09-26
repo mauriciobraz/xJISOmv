@@ -1,10 +1,10 @@
 import type {
 	Fiat as FiatEnum,
 	Ticker as TickerEnum,
-} from '$lib/constants/currency';
+} from '$lib/constants/ticker';
 
-import type { LiteralCompletion } from '$lib/types/string';
 import type { NestedObject } from '$lib/types/object';
+import type { LiteralCompletion } from '$lib/types/string';
 
 export type Bool = 0 | 1;
 

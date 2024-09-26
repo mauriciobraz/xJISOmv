@@ -24,6 +24,7 @@ const ESLINT_CONFIG = [
 	{
 		ignores: ['build/', '.svelte-kit/', 'dist/'],
 		rules: {
+			'@typescript-eslint/no-namespace': 'off',
 			'@typescript-eslint/no-unused-vars': 'off',
 		},
 	},

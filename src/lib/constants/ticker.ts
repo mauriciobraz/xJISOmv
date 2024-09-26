@@ -144,31 +144,126 @@ export enum Ticker {
 	TRX = 'trx',
 }
 
-export const SupportedTickers = [
-	Ticker.ERC20_ARB,
-	Ticker.ERC20_BNB,
-	Ticker.ERC20_DAI,
-	Ticker.ERC20_MKR,
+export type SupportedTicker = Partial<
+	Record<
+		Ticker,
+		{
+			logo: string;
+			name: string;
+			network: string;
+		}
+	>
+>;
 
-	Ticker.ERC20_EURC,
-	Ticker.ERC20_EURT,
-	Ticker.ERC20_LINK,
-	Ticker.ERC20_NEXO,
-	Ticker.ERC20_PEPE,
-	Ticker.ERC20_SHIB,
-	Ticker.ERC20_TUSD,
-	Ticker.ERC20_USDC,
-	Ticker.ERC20_USDP,
-	Ticker.ERC20_USDT,
-
-	Ticker.ERC20_VERSE,
-	Ticker.ERC20_1INCH,
-
-	Ticker.TRC20_USDT,
-	Ticker.TRC20_USDC,
-	Ticker.BEP20_XRP,
-
-	Ticker.DOGE,
-	Ticker.TRX,
-	Ticker.BTC,
-];
+export const SUPPORTED_TICKERS = {
+	// [Ticker.ERC20_ARB]: {
+	// 	logo: '/assets/tickers/ERC20_ARB.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Arbitrum',
+	// },
+	// [Ticker.ERC20_BNB]: {
+	// 	logo: '/assets/tickers/ERC20_BNB.png',
+	// 	network: 'Binance Smart Chain',
+	// 	name: 'Binance Coin',
+	// },
+	// [Ticker.ERC20_DAI]: {
+	// 	logo: '/assets/tickers/ERC20_DAI.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Dai',
+	// },
+	// [Ticker.ERC20_MKR]: {
+	// 	logo: '/assets/tickers/ERC20_MKR.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Maker',
+	// },
+	// [Ticker.ERC20_EURC]: {
+	// 	logo: '/assets/tickers/ERC20_EURC.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Euro Coin',
+	// },
+	// [Ticker.ERC20_EURT]: {
+	// 	logo: '/assets/tickers/ERC20_EURT.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Tether EURT',
+	// },
+	// [Ticker.ERC20_LINK]: {
+	// 	logo: '/assets/tickers/ERC20_LINK.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Chainlink',
+	// },
+	// [Ticker.ERC20_NEXO]: {
+	// 	logo: '/assets/tickers/ERC20_NEXO.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Nexo',
+	// },
+	// [Ticker.ERC20_PEPE]: {
+	// 	logo: '/assets/tickers/ERC20_PEPE.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Pepe',
+	// },
+	// [Ticker.ERC20_SHIB]: {
+	// 	logo: '/assets/tickers/ERC20_SHIB.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Shiba Inu',
+	// },
+	// [Ticker.ERC20_TUSD]: {
+	// 	logo: '/assets/tickers/ERC20_TUSD.png',
+	// 	network: 'Ethereum',
+	// 	name: 'TrueUSD',
+	// },
+	[Ticker.ERC20_USDC]: {
+		logo: '/assets/tickers/ERC20_USDC.png',
+		network: 'Ethereum',
+		name: 'USD Coin',
+	},
+	// [Ticker.ERC20_USDP]: {
+	// 	logo: '/assets/tickers/ERC20_USDP.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Pax Dollar',
+	// },
+	[Ticker.ERC20_USDT]: {
+		logo: '/assets/tickers/ERC20_USDT.png',
+		network: 'Ethereum',
+		name: 'Tether',
+	},
+	// [Ticker.ERC20_VERSE]: {
+	// 	logo: '/assets/tickers/ERC20_VERSE.png',
+	// 	network: 'Ethereum',
+	// 	name: 'Verse',
+	// },
+	// [Ticker.ERC20_1INCH]: {
+	// 	logo: '/assets/tickers/ERC20_1INCH.png',
+	// 	network: 'Ethereum',
+	// 	name: '1inch',
+	// },
+	[Ticker.TRC20_USDT]: {
+		logo: '/assets/tickers/TRC20_USDT.png',
+		network: 'Tron',
+		name: 'Tether TRC20',
+	},
+	[Ticker.TRC20_USDC]: {
+		logo: '/assets/tickers/TRC20_USDC.png',
+		network: 'Tron',
+		name: 'USD Coin TRC20',
+	},
+	[Ticker.BEP20_XRP]: {
+		logo: '/assets/tickers/BEP20_XRP.png',
+		network: 'Binance Smart Chain',
+		name: 'XRP',
+	},
+	[Ticker.DOGE]: {
+		logo: '/assets/tickers/DOGE.png',
+		network: 'Dogecoin',
+		name: 'Dogecoin',
+	},
+	[Ticker.TRX]: {
+		logo: '/assets/tickers/TRX.png',
+		network: 'Tron',
+		name: 'Tron',
+	},
+	[Ticker.BTC]: {
+		logo: '/assets/tickers/BTC.png',
+		network: 'Bitcoin',
+		name: 'Bitcoin',
+	},
+} as const satisfies SupportedTicker;

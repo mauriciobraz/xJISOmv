@@ -50,9 +50,6 @@ importers:
       tailwind-merge:
         specifier: ^2.5.2
         version: 2.5.2
-      znv:
-        specifier: ^0.4.0
-        version: 0.4.0(zod@3.23.8)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -2507,11 +2504,6 @@ packages:
   youch@3.3.3:
     resolution: {integrity: sha512-qSFXUk3UZBLfggAW3dJKg0BMblG5biqSF8M34E06o5CSsZtH92u9Hqmj2RzGiHDi64fhe83+4tENFP2DB6t6ZA==}
 
-  znv@0.4.0:
-    resolution: {integrity: sha512-6/pGsQhBisLzKdyC90mUCRgYDtCfQ4aQ68sDybexq3GMzqqkp662GH6qIyuCHJC1i72hJPHbWAhccTJVuZUQfA==}
-    peerDependencies:
-      zod: ^3.13.2
-
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
@@ -4660,10 +4652,5 @@ snapshots:
       cookie: 0.5.0
       mustache: 4.2.0
       stacktracey: 2.1.8
-
-  znv@0.4.0(zod@3.23.8):
-    dependencies:
-      colorette: 2.0.20
-      zod: 3.23.8
 
   zod@3.23.8: {}

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { Fiat, Ticker } from '$lib/constants/currency';
+import { Fiat, Ticker } from '$lib/constants/ticker';
 import { enumKeys, parseType, typedRecord } from '$lib/helpers/zod';
 
 const Fiats = enumKeys(Fiat);

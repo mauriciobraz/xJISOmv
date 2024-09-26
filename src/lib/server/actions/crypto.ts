@@ -1,7 +1,7 @@
 import { error, json } from '@sveltejs/kit';
 
 import { logger } from '$lib/helpers/logger';
-import { Ticker } from '$lib/constants/currency';
+import { Ticker } from '$lib/constants/ticker';
 
 import { ADDRESSES_TARGET } from '$lib/server/env';
 import { encodeAddress } from '$lib/models/address';

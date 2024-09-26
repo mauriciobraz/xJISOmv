@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { Ticker } from '$lib/constants/currency';
+import { Ticker } from '$lib/constants/ticker';
 
 export const AddFundsSchema = z.object({
 	ticker: z.nativeEnum(Ticker),
